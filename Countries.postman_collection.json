@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "8d1cd282-39d4-4f75-befc-981a542ea5d9",
+		"name": "Countries",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ALL Countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/all",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Country by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/name/{{name}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"name",
+						"{{name}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Country by name with fulltext",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/name/{{name}}?fullText=true",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"name",
+						"{{name}}"
+					],
+					"query": [
+						{
+							"key": "fullText",
+							"value": "true"
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Country by code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/alpha/{{code}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"alpha",
+						"{{code}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One or more Countries by codes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/alpha?codes=ie;de;ch",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"alpha"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "codes",
+							"value": "ie;de;ch"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Country by currency",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/currency/jpy",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"currency",
+						"jpy"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Country by language",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/lang/es",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"lang",
+						"es"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Country by capital",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/capital/dublin",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"capital",
+						"dublin"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Country by calling code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/callingcode/34",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"callingcode",
+						"34"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One or more Countries by region",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/region/asia",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"region",
+						"asia"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One or more Countries by regional bloc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/regionalbloc/cais",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"regionalbloc",
+						"cais"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One Country with custom filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/capital/dublin?fields=name;capital;region;population;",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"capital",
+						"dublin"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "fields",
+							"value": "name;capital;region;population;"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "spain",
+			"value": "name"
+		}
+	]
+}
